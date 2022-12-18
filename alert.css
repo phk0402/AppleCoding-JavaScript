@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.alert-box {
+  background: lightblue;
+  color: blue;
+  padding: 20px;
+  border-radius: 4px;
+  display: none;
+}
