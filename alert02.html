@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert 창 만들기 - 파라미터</title>
+  <link rel="stylesheet" href="alert.css">
+</head>
+<body>
+  <!-- 
+    UI 만드는 법
+    1. 미리 디자인해놓고 숨김
+    2. 버튼 누르거나 하면 보여줌 JS 이용
+    ex. 모달, alert, 탭, 툴팁, 서브메뉴, 경고문 등
+   -->
+  
+  <div class="alert-box" id="alert">
+    <P>Alert 박스</P>
+    <button type="button" onclick="alertModal('none')">닫기</button>
+  </div>
+
+  <button type="button" onclick="alertModal('block')">
+    버튼1
+  </button>
+  
+  <script>
+
+    // function 문법 왜 씀? 2. 파라미터
+    // 함수에 구멍 뚫어 놓으면 앞으로 함수 쓸 때 ()안에 암거나 입력가능
+    // 파라미터 장점 : 함수 하나로 다양한 기능 만들기 가능
+
+    function alertModal(구멍) {
+      document.getElementById('alert').style.display = 구멍;
+    }
+    // alertModal(123);
+    // alertModal() 실행하는데... 구멍에 123 넣어서 실행해주세요
+
+  </script>
+</body>
+</html>
