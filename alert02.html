@@ -16,25 +16,49 @@
    -->
   
   <div class="alert-box" id="alert">
-    <P>Alert 박스</P>
-    <button type="button" onclick="alertModal('none')">닫기</button>
+    <P id="title">Alert 박스</P>
+    <button type="button" id="closeBtn"">X</button>
   </div>
 
-  <button type="button" onclick="alertModal('block')">
-    버튼1
-  </button>
+  <button type="button" onclick="alertModalID('아이디입력해라')">버튼1</button>
+  <button type="button" onclick="alertModalID('비번입력해라')">버튼2</button>
+
   
   <script>
-
     // function 문법 왜 씀? 2. 파라미터
     // 함수에 구멍 뚫어 놓으면 앞으로 함수 쓸 때 ()안에 암거나 입력가능
     // 파라미터 장점 : 함수 하나로 다양한 기능 만들기 가능
+    // alertModal(123);
+    // alertModal() 실행하는데... 구멍에 123 넣어서 실행해주세요
+
+
+    // EventListener 이벤트 리스너
+    // closeBtn 이 요소가 클릭되면 안에 코드 실행해 주세요
+    // document.getElementById('closeBtn').addEventListener('click', function() {
+      // 안에 코드
+    // })
+    document.getElementById('closeBtn').addEventListener('click', function() {
+      document.getElementById('alert').style.display = 'none';
+    })
+
+
+    function alertModalID(구멍) {
+      // 1. 제목바꾸기
+      document.getElementById('title').innerHTML = 구멍;
+      // 2. 열기
+      document.getElementById('alert').style.display = 'block';
+    }
+
+    // function alertModalPW() {
+    //   document.getElementById('title').innerHTML = "비번입력하세요";
+    //   document.getElementById('alert').style.display = 'block';
+    // }
 
     function alertModal(구멍) {
       document.getElementById('alert').style.display = 구멍;
     }
-    // alertModal(123);
-    // alertModal() 실행하는데... 구멍에 123 넣어서 실행해주세요
+
+
 
   </script>
 </body>
