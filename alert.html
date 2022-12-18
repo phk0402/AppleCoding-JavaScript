@@ -17,15 +17,26 @@
   
   <div class="alert-box" id="alert">
     Alert 박스
-    <button type="button" onclick="document.getElementById('alert').style.display = 'none';">닫기</button>
+    <button type="button" onclick="closeAlert()">닫기</button>
   </div>
-  <button type="button" onclick="document.getElementById('alert').style.display = 'block';">
+  <button type="button" onclick="openAlert()">
     버튼
   </button>
   
   <script>
 
+    // function 문법 왜 씀? 긴 코드를 깔끔하게 한 단어로 축약 가능
+    // function 아무렇게나작명() {
+        // 긴 코드~~
+    // }
+    
+    function openAlert() {
+      document.getElementById('alert').style.display = 'block';
+    }
 
+    function closeAlert() {
+      document.getElementById('alert').style.display = 'none';
+    }
 
   </script>
 </body>
